@@ -24,11 +24,11 @@ public class Draw extends Canvas {
     }
 
 
-    /*public void line(Points2D From, Points2D To){
-            g.drawLine(convert.ix(From.X), convert.iy(From.Y), convert.ix(To.X), convert.iy(To.Y));
-    }*/
-    
     public void line(Points2D From, Points2D To){
+            g.drawLine(convert.ix(From.X), convert.iy(From.Y), convert.ix(To.X), convert.iy(To.Y));
+    }
+    
+    public void line3D(Points2D From, Points2D To){
     g.drawLine(convert.i3DX(From.X), convert.i3DY(From.Y), convert.i3DX(To.X), convert.i3DY(To.Y));
 	}
 
@@ -60,7 +60,7 @@ public class Draw extends Canvas {
     		Manipula.perspectiva(objeto, mod.theta, mod.phi, mod.rho, mod.d);
     		objeto.arestas.forEach(aresta -> {
     			System.out.println(objeto.coordPersp.get(aresta.X));
-    			line(objeto.coordPersp.get(aresta.X),objeto.coordPersp.get(aresta.Y));
+    			line3D(objeto.coordPersp.get(aresta.X),objeto.coordPersp.get(aresta.Y));
     		});
     	});
     }		
