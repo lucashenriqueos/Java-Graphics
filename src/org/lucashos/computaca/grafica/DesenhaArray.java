@@ -31,7 +31,7 @@ public class DesenhaArray extends JPanel{
 	public List<Obj3D> objetos = new ArrayList<>();
 	List<Geometria> geometrias = new ArrayList<>();
 	Dimension Dim;
-    Draw draw;    
+        Draw draw;    
     
     public DesenhaArray(){
     	atualizaDados("0.3","1.3", "17.0", "2000");
@@ -56,9 +56,10 @@ public class DesenhaArray extends JPanel{
     }
     
     public void iniciarAnimacao(){
-        boolean animar = true;
-        while(animar){
-            Animacao.rotX(objetos.get(0), 0.3);
+        Obj3D obj = objetos.get(0);
+        int i = 0;
+        while(++i != 10){
+            Animacao.rotX(obj, 90);
             repaint();
             try {
                 Thread.sleep(200);

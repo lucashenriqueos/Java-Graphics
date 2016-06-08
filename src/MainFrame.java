@@ -285,7 +285,8 @@ public class MainFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnGOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGOActionPerformed
-        ((DesenhaArray) panelDesenho).atualizaDados(txtTheta.getText(), txtPhi.getText(), txtRho.getText(), txtD.getText());
+        //((DesenhaArray) panelDesenho).atualizaDados(txtTheta.getText(), txtPhi.getText(), txtRho.getText(), txtD.getText());
+        ((DesenhaArray) panelDesenho).iniciarAnimacao();
     }//GEN-LAST:event_btnGOActionPerformed
 
     private void addPhiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addPhiActionPerformed
