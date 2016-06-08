@@ -58,9 +58,11 @@ public class DesenhaArray extends JPanel{
     public void iniciarAnimacao(){
         Obj3D obj = objetos.get(0);
         int i = 0;
-        while(++i != 10){
-            Animacao.rotX(obj, 90);
-            repaint();
+        while(++i != 1000){
+            //Animacao.rotX(obj, 0.5);
+            Animacao.rotY(obj, 0.5);
+            Graphics g = this.getGraphics();
+            paintComponent(g);
             try {
                 Thread.sleep(200);
             } catch (InterruptedException e) {
