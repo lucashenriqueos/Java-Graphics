@@ -10,7 +10,7 @@ public class Points3D {
 	public Points3D(float f, float g, float h) {
 		X = f;
 		Y = g;
-        Z = h;
+                Z = h;
 		W = 1;
 	}
 	
